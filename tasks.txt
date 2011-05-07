@@ -3,7 +3,7 @@ Do zrobienia są moduły:
 - jednostki centralnej łączącej ze sobą wszystkie komponenty, przetwarzającej informacje i rozsyłającej sygnały do poszczególnych elementów
 - obsługi wrzutni monet (zliczanie nominałów) wraz z samą wrzutnią (możemy posłużyć się przyciskami odpowiadającymi nominałom bo nie wyobrażam sobie wrzucania monet przez ekran :D)
 - obsługi klawiatury (typowa klawiatura z przyciskiem sms) wraz z implementacją GUI samej klawiatury
-- obsługi ekranu (pojawiające się informacje o wrzuconym nominale, wartości zamówienia i wciskanych przyciskach)
+- obsługi ekranu (pojawiające się informacje o wrzuconym nominale, wartości zamówienia i wciskanych przyciskach) -> wdanilo
 - obsługi kasety z monetami, wydawanie reszty po otrzymaniu informacji od jednostki centralnej
 - bazy dostępnych produktów i monet (jako element jednostki centralnej)
 - walidator kodów sms (wyciąganie nominału z poprawnego kodu) -> Mateusz Ziarko
