@@ -7,7 +7,7 @@ Do zrobienia są moduły:
 - obsługi kasety z monetami, wydawanie reszty po otrzymaniu informacji od jednostki centralnej- ja(^_^), zoinho lub darek
 - bazy dostępnych produktów i monet (jako element jednostki centralnej)
 - walidator kodów sms (wyciąganie nominału z poprawnego kodu) -> Mateusz Ziarko
-- serwisanta (specjalny stan w którym wprowadzane są ilości produktów i monet po wymianie kasety)
+- serwisanta (specjalny stan w którym wprowadzane są ilości produktów i monet po wymianie kasety) -> Magda
 
 
 - dokumentacja -> Mateusz Ziarko
