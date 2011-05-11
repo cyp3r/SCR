@@ -5,7 +5,7 @@ Do zrobienia są moduły:
 - obsługi klawiatury (typowa klawiatura z przyciskiem sms) wraz z implementacją GUI samej klawiatury - ja(^_^), zoinho lub darek
 - obsługi ekranu (pojawiające się informacje o wrzuconym nominale, wartości zamówienia i wciskanych przyciskach) -> wdanilo
 - obsługi kasety z monetami, wydawanie reszty po otrzymaniu informacji od jednostki centralnej- ja(^_^), zoinho lub darek
-- bazy dostępnych produktów i monet (jako element jednostki centralnej)
+- bazy dostępnych produktów i monet (jako element jednostki centralnej) -> Łukasz Jaromi
 - walidator kodów sms (wyciąganie nominału z poprawnego kodu) -> Mateusz Ziarko
 - serwisanta (specjalny stan w którym wprowadzane są ilości produktów i monet po wymianie kasety) -> Magda
 
