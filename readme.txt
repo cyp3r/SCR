@@ -1,3 +1,3 @@
 Plik testowy :)
 Lubie placki ;] Darek
-poremek
+przemek testuje.
