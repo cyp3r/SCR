@@ -1,0 +1,123 @@
+I-Logix-RPY-Archive version 8.5.2 * 2030848
+{ CGEMdiWorkspace 
+	- stubList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- myViewsWithID = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 180;
+				- m_nTop = 180;
+				- m_nRight = 984;
+				- m_nBottom = 603;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Jav";
+				- _name = "StatechartDiagram";
+				- _id = GUID fe7bd816-ab49-495f-aea3-0622e0852eeb;
+			}
+			- _UpLeft = -4 60 ;
+			- _DownRight = 797 431 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 134;
+				- m_nTop = 66;
+				- m_nRight = 1014;
+				- m_nBottom = 477;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Komponent";
+				- _name = "StatechartDiagram";
+				- _id = GUID 8023ce0e-d469-46bd-8d42-48b59a486214;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 837 341 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 310;
+				- m_nTop = 202;
+				- m_nRight = 797;
+				- m_nBottom = 479;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IPanelDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "";
+				- _name = "gui1";
+				- _id = GUID fd25f079-d063-426e-a9d1-4ff3f516abd9;
+			}
+			- _UpLeft = 0 117 ;
+			- _DownRight = 863 657 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 2;
+		}
+	}
+	- _fullName = "E:\\III rok\\Systemy Czasu Rzeczywistego\\6a\\Jav";
+	- m_SearchScopeList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- bUsingCustomBrowserView = 0;
+	- bUsingQueries = 0;
+	- bApplyOnDiagrams = 0;
+	- liRhId = { IRPYRawContainer 
+		- size = 0;
+	}
+	- liElementTypes = { IRPYRawContainer 
+		- size = 0;
+	}
+
+	- m_favoritesTree = {
+		count=2;
+		{ - favoritesItem
+			generation = 0;
+			name = Favorites;
+			idOrFolder = folder;
+		}
+		{ - favoritesItem
+			generation = 1;
+			name = licznik;
+			idOrFolder = GUID 249d64da-a693-4139-a2b3-4f68e3126117;
+		}
+	}
+
+}
+

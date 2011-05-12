@@ -1,0 +1,47 @@
+I-Logix-RPY-Archive version 8.5.2 * 2030848
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 3;
+	- value = "animator/DefaultConfig/Default/Default_pkgClass.java" 5.11.2011::22:6:28
+	"animator/DefaultConfig/Default/Jav.java" 5.12.2011::17:47:17
+	"animator/DefaultConfig/Default/Komponent.java" 5.11.2011::22:6:28
+	
+}
+- size = 4;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "Default.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "Default";
+	- _id = GUID 2970263e-bdf6-4006-ba3e-12cef9acae52;
+}
+- genTime = 5.12.2011::17:47:17;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Komponent";
+	- _id = GUID 4a9fbc44-99c6-4e98-af29-f0e4d6606e77;
+}
+- genTime = 5.11.2011::22:6:28;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "animator.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "animator\\DefaultConfig";
+	- _id = GUID a16ec5d2-445b-40f6-9850-94508ad48c31;
+}
+- genTime = 5.12.2011::17:47:34;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Jav";
+	- _id = GUID 6e9ca01c-040b-4e85-bbc9-4f7798db5ef4;
+}
+- genTime = 5.12.2011::17:47:17;
+

@@ -1,0 +1,27 @@
+Specyfikacja:
+
+- automat realizuje zamówienie produktu przy płatności tradycyjnej
+	- następuje wrzucenie monety i wydanie produktu jeżeli zebrano odpowiedni nominał
+	- następuje wybranie produktu, a następnie wrzucenie monety, wydanie produktu następuje po zgromadzeniu odpowiedniego nominału
+- automat realizuje zamówienie produktu przy płatności sms
+	- konieczne jest wciśnięcie przycisku sms, wprowadzenie kodu, po czym procedura zamówienia przebiega tak jak w 1a, z wyjątkiem wrzucania monety
+	- automat monitoruje czy wydany produkt został odebrany z podajnika, przez ~minutę informując o tym sygnałami dźwiękowymi
+- podczas realizacji zamówienia może wystąpić błąd
+	- zablokowanie szyny z produktem
+	- brak wybranego produktu
+	- błędny kod płatności sms
+	- inny błąd uniemożliwiający zrealizowanie zamówienia
+- ładowanie automatu (otwarcie pokrywy automatu odpowiednim kluczem aktywuje stan wprowadzania ilości poszczególnych produktów)
+- anulowanie zamówienia przed jego realizacją i zwrot pieniędzy
+- wydawanie reszty z nominału większego niż łączna wartość zamówienia
+
+Dodatkowe informacje:
+
+- Wykorzystany typ interfejsu: GUI
+- Chcemy zwizualizować: klawiaturę, ekran, przyciski automatu (oddzielnie od klawiatury)
+- Funkcjonalność interfejsu: użytkownik widzi na ekranie komunikaty od automatu, wszystkie dane wprowadzane są za pomocą klawiatury i wyświetlane na ekranie
+- Rodzaj użytkowników: zwykły klient, serwisant (uzupełniający zasoby)
+- Akcje użytkowników: zwykły klient (złożenie zamówienia, dokonanie płatności, anulowanie zamówienia, odbiór zamówienia), serwisant (uzupełnienie zasobów, wymiana kasety z monetami, włączenie/wyłączenie automatu)
+- Tryby działania automaty: normalny, serwisowy (zablokowana wrzutnia monet)
+- Stany i podstany automatu: włączony (bezczynny, wydawanie produktu, wydawanie reszty, oczekiwanie na płatność, wymiana zasobów), wyłączony, zepsuty.
+- Wewnętrzne kontrolery: kontroler wrzutni monet (sprawdza czy nie zablokowana), kontroler kasety z monetami (sprawdza czy po zamówieniu można wydać resztę), kontroler podajnika produktów (sprawdza czy nie jest on zablokowany i czy produkt został poprawnie wydany).

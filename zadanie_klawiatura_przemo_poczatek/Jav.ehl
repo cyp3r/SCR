@@ -1,0 +1,6 @@
+[Op Calls]
+[Events]
+Jav[0]->GEN(akcja_gui1())`Jav
+Jav[0]->komponent1->GEN(akcja_gui1())`Komponent
+[Active Breakpoints]
+[Inactive Breakpoints]
