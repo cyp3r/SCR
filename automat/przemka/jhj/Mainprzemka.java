@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 7.5.3
-	Login		: Cezer
+	Login		: virtual
 	Component	: przemka
 	Configuration 	: jhj
 	Model Element	: jhj
@@ -43,7 +43,11 @@ public class Mainprzemka {
             Class.forName("Default.event_4");
             Class.forName("Default.event_6");
             Class.forName("Default.powrot");
+            Class.forName("Default.serwisIn");
+            Class.forName("Default.serwisOut");
             Class.forName("Default.starcik");
+            Class.forName("Default.wlaczSerwisowanie");
+            Class.forName("Default.wylaczSerwisowanie");
             Class.forName("Default.zwrot");
     
         // Registering Static Classes 

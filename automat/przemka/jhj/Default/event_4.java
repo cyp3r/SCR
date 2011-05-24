@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 7.5.3
-	Login		: Cezer
+	Login		: virtual
 	Component	: przemka
 	Configuration 	: jhj
 	Model Element	: event_4

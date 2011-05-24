@@ -104,8 +104,8 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 					- size = 0;
 				}
 			}
-			- weakCGTime = 5.24.2011::15:31:48;
-			- strongCGTime = 5.24.2011::15:31:48;
+			- weakCGTime = 5.24.2011::18:49:55;
+			- strongCGTime = 5.24.2011::18:49:55;
 			- AnimScopeElements = { IRPYRawContainer 
 				- size = 0;
 			}
@@ -118,7 +118,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 	- SelectedVariants = { IRPYRawContainer 
 		- size = 0;
 	}
-	- weakCGTime = 5.24.2011::15:31:48;
+	- weakCGTime = 5.24.2011::18:49:55;
 	- strongCGTime = 5.23.2011::22:46:49;
 }
 

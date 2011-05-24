@@ -1,8 +1,8 @@
 echo off
 
-set RHAP_JARS_DIR=C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib
-set FRAMEWORK_NONE_JARS=C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxf.jar;C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\anim.jar;C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\animcom.jar;C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxfInstMock.jar;
-set FRAMEWORK_ANIM_JARS=C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxf.jar;C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\anim.jar;C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\animcom.jar;C:/Users/Cezer/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxfInst.jar;
+set RHAP_JARS_DIR=C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib
+set FRAMEWORK_NONE_JARS=C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxf.jar;C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\anim.jar;C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\animcom.jar;C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxfInstMock.jar;
+set FRAMEWORK_ANIM_JARS=C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxf.jar;C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\anim.jar;C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\animcom.jar;C:/Users/virtual/IBM/Rational/Rhapsody/7.5.3/Share\LangJava\lib\oxfInst.jar;
 set SOURCEPATH=%SOURCEPATH%
 set CLASSPATH=%CLASSPATH%;.
 set PATH=%RHAP_JARS_DIR%;%PATH%;
@@ -29,23 +29,27 @@ if "%1" == "run" goto run
 
 :clean
 echo cleaning class files
-if exist Default\dodaj_nominal_10gr.class del Default\dodaj_nominal_10gr.class
-if exist Default\do_wyboru.class del Default\do_wyboru.class
-if exist Default\Default_pkgClass.class del Default\Default_pkgClass.class
-if exist Default\Produkt.class del Default\Produkt.class
-if exist Default\dodaj_nominal_5.class del Default\dodaj_nominal_5.class
-if exist Default\dodaj_nominal_2zl.class del Default\dodaj_nominal_2zl.class
-if exist Mainprzemka.class del Mainprzemka.class
+if exist Default\serwisOut.class del Default\serwisOut.class
 if exist Default\dodaj_nominal_20gr.class del Default\dodaj_nominal_20gr.class
+if exist Default\Jav.class del Default\Jav.class
 if exist Default\event_6.class del Default\event_6.class
+if exist Mainprzemka.class del Mainprzemka.class
 if exist Default\powrot.class del Default\powrot.class
 if exist Default\zwrot.class del Default\zwrot.class
+if exist Default\Default_pkgClass.class del Default\Default_pkgClass.class
+if exist Default\wlaczSerwisowanie.class del Default\wlaczSerwisowanie.class
 if exist Default\dodaj_nominal_50gr.class del Default\dodaj_nominal_50gr.class
 if exist Default\dodaj_nominal_5gr.class del Default\dodaj_nominal_5gr.class
 if exist Default\starcik.class del Default\starcik.class
 if exist Default\event_4.class del Default\event_4.class
-if exist Default\Jav.class del Default\Jav.class
+if exist Default\serwisIn.class del Default\serwisIn.class
 if exist Default\dodaj_nominal_1zl.class del Default\dodaj_nominal_1zl.class
+if exist Default\Produkt.class del Default\Produkt.class
+if exist Default\wylaczSerwisowanie.class del Default\wylaczSerwisowanie.class
+if exist Default\dodaj_nominal_10gr.class del Default\dodaj_nominal_10gr.class
+if exist Default\do_wyboru.class del Default\do_wyboru.class
+if exist Default\dodaj_nominal_5.class del Default\dodaj_nominal_5.class
+if exist Default\dodaj_nominal_2zl.class del Default\dodaj_nominal_2zl.class
 
 if "%1" == "clean" goto end
 

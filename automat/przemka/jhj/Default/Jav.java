@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 7.5.3
-	Login		: Cezer
+	Login		: virtual
 	Component	: przemka
 	Configuration 	: jhj
 	Model Element	: Jav
@@ -85,6 +85,8 @@ public class Jav implements RiJStateConcept, Animated {
     */
     protected Produkt przyporzadkowanie;		//## attribute przyporzadkowanie 
     
+    protected boolean serwisowanie = false;		//## attribute serwisowanie 
+    
     protected double suma;		//## attribute suma 
     
     protected Produkt temp_produkt;		//## attribute temp_produkt 
@@ -105,8 +107,9 @@ public class Jav implements RiJStateConcept, Animated {
     public static final int state_3=6;
     public static final int start_maszyny=7;
     public static final int Start=8;
-    public static final int nie_znaleziono=9;
-    public static final int napisy_poczatkowe=10;
+    public static final int serwis=9;
+    public static final int nie_znaleziono=10;
+    public static final int napisy_poczatkowe=11;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -116,11 +119,15 @@ public class Jav implements RiJStateConcept, Animated {
     
     public static final int Jav_Timeout_wydawanie_id = 2;		//## ignore 
     
-    public static final int Jav_Timeout_wybor_produktu_id = 3;		//## ignore 
+    public static final int Jav_Timeout_wydano_id = 3;		//## ignore 
     
-    public static final int Jav_Timeout_Start_id = 4;		//## ignore 
+    public static final int Jav_Timeout_wybor_produktu_id = 4;		//## ignore 
     
-    public static final int Jav_Timeout_nie_znaleziono_id = 5;		//## ignore 
+    public static final int Jav_Timeout_start_maszyny_id = 5;		//## ignore 
+    
+    public static final int Jav_Timeout_Start_id = 6;		//## ignore 
+    
+    public static final int Jav_Timeout_nie_znaleziono_id = 7;		//## ignore 
     
     
     //## statechart_method 
@@ -441,6 +448,21 @@ public class Jav implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
+    public boolean getSerwisowanie() {
+        return serwisowanie;
+    }
+    
+    //## auto_generated 
+    public void setSerwisowanie(boolean p_serwisowanie) {
+        try {
+        serwisowanie = p_serwisowanie;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
+    }
+    
+    //## auto_generated 
     public double getSuma() {
         return suma;
     }
@@ -581,6 +603,11 @@ public class Jav implements RiJStateConcept, Animated {
                     state_3_add(animStates);
                 }
                 break;
+                case serwis:
+                {
+                    serwis_add(animStates);
+                }
+                break;
                 default:
                     break;
             }
@@ -648,6 +675,11 @@ public class Jav implements RiJStateConcept, Animated {
                     res = state_3_takeEvent(id);
                 }
                 break;
+                case serwis:
+                {
+                    res = serwis_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -695,6 +727,11 @@ public class Jav implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void serwis_add(AnimStates animStates) {
+            animStates.add("ROOT.serwis");
+        }
+        
+        //## statechart_method 
         public void nie_znaleziono_add(AnimStates animStates) {
             animStates.add("ROOT.nie_znaleziono");
         }
@@ -730,6 +767,20 @@ public class Jav implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int wydanoTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Jav_Timeout_wydano_id)
+                {
+                    animInstance().notifyTransitionStarted("21");
+                    wydano_exit();
+                    napisy_poczatkowe_entDef();
+                    animInstance().notifyTransitionEnded("21");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
         public void wydano_entDef() {
             wydano_enter();
         }
@@ -737,6 +788,10 @@ public class Jav implements RiJStateConcept, Animated {
         //## statechart_method 
         public void wydawanie_entDef() {
             wydawanie_enter();
+        }
+        
+        //## statechart_method 
+        public void serwisExit() {
         }
         
         //## statechart_method 
@@ -763,6 +818,11 @@ public class Jav implements RiJStateConcept, Animated {
         //## statechart_method 
         public int wydano_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = wydanoTakeRiJTimeout();
+                }
+            
             return res;
         }
         
@@ -923,6 +983,7 @@ public class Jav implements RiJStateConcept, Animated {
             lancuch = "WYDANO";
             
             //#]
+            itsRiJThread.schedTimeout(1000, Jav_Timeout_wydano_id, this, "ROOT.wydano");
         }
         
         //## statechart_method 
@@ -942,6 +1003,19 @@ public class Jav implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void serwisEnter() {
+            //#[ state ROOT.serwis.(Entry) 
+            lancuch = "Tryb serwowy aktywny...";
+            ekran = "Podaj ilosc produktow o ktore poprosi automat...";
+            //#]
+        }
+        
+        //## statechart_method 
+        public void serwis_entDef() {
+            serwis_enter();
+        }
+        
+        //## statechart_method 
         public int StartTakedodaj_nominal_1zl() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("17");
@@ -957,6 +1031,7 @@ public class Jav implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void start_maszynyExit() {
+            itsRiJThread.unschedTimeout(Jav_Timeout_start_maszyny_id, this);
         }
         
         //## statechart_method 
@@ -1052,6 +1127,24 @@ public class Jav implements RiJStateConcept, Animated {
             state_3_entDef();
             animInstance().notifyTransitionEnded("18");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int start_maszynyTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Jav_Timeout_start_maszyny_id)
+                {
+                    //## transition 22 
+                    if(serwisowanie==true)
+                        {
+                            animInstance().notifyTransitionStarted("22");
+                            start_maszyny_exit();
+                            serwis_entDef();
+                            animInstance().notifyTransitionEnded("22");
+                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                        }
+                }
             return res;
         }
         
@@ -1152,6 +1245,7 @@ public class Jav implements RiJStateConcept, Animated {
             
             lancuch = "Wybrano numer: " + id_product;
             //#]
+            itsRiJThread.schedTimeout(1000, Jav_Timeout_start_maszyny_id, this, "ROOT.start_maszyny");
         }
         
         //## statechart_method 
@@ -1240,11 +1334,33 @@ public class Jav implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int serwis_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = serwisTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void serwis_exit() {
+            popNullConfig();
+            serwisExit();
+            animInstance().notifyStateExited("ROOT.serwis");
+        }
+        
+        //## statechart_method 
         public int start_maszyny_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(do_wyboru.do_wyboru_Default_id))
                 {
                     res = start_maszynyTakedo_wyboru();
+                }
+            else if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = start_maszynyTakeRiJTimeout();
                 }
             else if(event.isTypeOf(starcik.starcik_Default_id))
                 {
@@ -1311,6 +1427,8 @@ public class Jav implements RiJStateConcept, Animated {
         public void napisy_poczatkoweEnter() {
             //#[ state ROOT.napisy_poczatkowe.(Entry) 
             lancuch = "Wybierz cyfre i zatwierdz ja klawiszem \"OK\".";
+            ekran = "Witaj drogi kliencie!";
+            serwisowanie = false;
             //#]
         }
         
@@ -1347,6 +1465,15 @@ public class Jav implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void serwis_enter() {
+            animInstance().notifyStateEntered("ROOT.serwis");
+            pushNullConfig();
+            rootState_subState = serwis;
+            rootState_active = serwis;
+            serwisEnter();
+        }
+        
+        //## statechart_method 
         public int state_3TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("12");
@@ -1359,6 +1486,7 @@ public class Jav implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void wydanoExit() {
+            itsRiJThread.unschedTimeout(Jav_Timeout_wydano_id, this);
         }
         
         //## statechart_method 
@@ -1542,6 +1670,21 @@ public class Jav implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int serwisTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            //## transition 23 
+            if(serwisowanie==false)
+                {
+                    animInstance().notifyTransitionStarted("23");
+                    serwis_exit();
+                    start_maszyny_entDef();
+                    animInstance().notifyTransitionEnded("23");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
         public int start_maszynyTakestarcik() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("0");
@@ -1655,6 +1798,7 @@ public class Jav implements RiJStateConcept, Animated {
         msg.add("wartosc", wartosc);
         msg.add("cena_produktu", cena_produktu);
         msg.add("zaplacono", zaplacono);
+        msg.add("serwisowanie", serwisowanie);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
