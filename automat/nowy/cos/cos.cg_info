@@ -1,0 +1,16 @@
+I-Logix-RPY-Archive version 8.5.2 * 2030848
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 0;
+}
+- size = 1;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "nowy.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "nowy\\cos";
+	- _id = GUID 328d6208-5c2b-4b6d-94ac-5c446c9448d5;
+}
+- genTime = 5.23.2011::23:18:47;
+

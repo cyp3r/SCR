@@ -1,0 +1,13 @@
+I-Logix-RPY-Archive version 8.5.2 * 2030848
+
+- filesTable = { IRPYRawContainer 
+	- size = 6;
+	- value = "Jav.rpy" ""
+	"Jav_rpy\\CGCompatibilityPre753Java.sbs" "CGCompatibilityPre753Java"
+	"Jav_rpy\\Default.sbs" "Default"
+	"Jav_rpy\\nowy.cmp" "nowy"
+	"Jav_rpy\\przemka.cmp" "przemka"
+	"Jav_rpy\\zoinha.cmp" "zoinha"
+	
+}
+

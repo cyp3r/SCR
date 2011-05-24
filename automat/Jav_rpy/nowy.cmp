@@ -1,0 +1,106 @@
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
+{ IComponent 
+	- _id = GUID c38fe376-c3e3-42d2-9d0f-891f5c5387b0;
+	- _myState = 8192;
+	- _name = "nowy";
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 12c1e2e1-2f13-4d71-b001-f96f2c5b3690;
+		- _myState = 73728;
+		- _name = "Files";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 328d6208-5c2b-4b6d-94ac-5c446c9448d5;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 328d6208-5c2b-4b6d-94ac-5c446c9448d5;
+			- _myState = 8192;
+			- _name = "cos";
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 90dac91d-7729-4388-afe3-9b05e349b0ac;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "E:/III rok/Systemy Czasu Rzeczywistego/PROJEKT WIELKI MERGE/proba_generalna/nowy/DefaultConfig/nowy.bat";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 825ce69e-141a-4313-b42d-dd880f855eeb;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "E:/III rok/Systemy Czasu Rzeczywistego/PROJEKT WIELKI MERGE/proba_generalna/nowy/DefaultConfig/Mainnowy";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID dbbccafa-7629-4033-8c8c-53c91de0a5e7;
+				- _myState = 8192;
+				- _name = "cos";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 5.23.2011::23:13:16;
+			- strongCGTime = 5.23.2011::23:13:16;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 5.23.2011::23:12:37;
+	- strongCGTime = 5.23.2011::23:12:37;
+}
+
